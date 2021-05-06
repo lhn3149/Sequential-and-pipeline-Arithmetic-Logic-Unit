@@ -1,0 +1,85 @@
+`timescale 1 ps / 1 ps
+module lhn_pipeline_tb;
+	reg [6:0] M_val_tb;
+	reg [3:0] m_val_tb;
+	reg clock_tb;
+	wire [10:0] final_product_tb;
+	
+	lhn_pipeline dut (M_val_tb, m_val_tb, clock_tb, final_product_tb);
+	
+	initial 
+	
+	begin 
+				M_val_tb = 7'b0000000;
+				m_val_tb = 4'b0000;
+				clock_tb = 1'b0;
+				#20000
+				clock_tb = 1'b1;
+				#20000; 
+				
+				
+				M_val_tb = 7'b1111111;
+				m_val_tb = 4'b1111;
+				clock_tb = 1'b0;
+				#20000;
+				clock_tb = 1'b1;
+				#20000; 
+				
+				
+				M_val_tb = 7'b1010101 ;
+				m_val_tb = 4'b0101;
+				clock_tb = 1'b0;
+				#20000;
+				clock_tb = 1'b1;
+				#20000; 
+
+				
+				M_val_tb = 7'b0101010 ;
+				m_val_tb = 4'b1010;
+				clock_tb = 1'b0;
+				#20000
+				clock_tb = 1'b1;
+				#20000; 
+				
+				
+				M_val_tb = 7'b1010101;
+				m_val_tb = 4'b1010;
+				clock_tb = 1'b0;
+				#20000
+				clock_tb = 1'b1;
+				#20000;
+
+				clock_tb = 1'b0;
+				#20000
+				clock_tb = 1'b1;
+				#20000;	
+				clock_tb = 1'b0;
+				#20000
+				clock_tb = 1'b1;
+				#20000;	
+				clock_tb = 1'b0;
+				#20000
+				clock_tb = 1'b1;
+				#20000;	
+				clock_tb = 1'b0;
+				#20000
+				clock_tb = 1'b1;
+				#20000;	
+				clock_tb = 1'b0;
+				#20000
+				clock_tb = 1'b1;
+				#20000;	
+				clock_tb = 1'b0;
+				#20000
+				clock_tb = 1'b1;
+				#20000;
+				clock_tb = 1'b0;
+				#20000
+				clock_tb = 1'b1;
+				#20000;
+				
+	end
+	
+	
+	
+endmodule 
